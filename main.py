@@ -4,6 +4,7 @@ from compoonents.clienti import Cliente
 import tkinter.messagebox as msg
 
 
+
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
