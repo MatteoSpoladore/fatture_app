@@ -1,8 +1,8 @@
 import customtkinter as ctk
 import sqlite3
-from compoonents.clienti import Cliente
+from components.clienti import Cliente
+from components.mostra_clienti import ClientiView
 import tkinter.messagebox as msg
-
 
 
 class App(ctk.CTk):
@@ -67,7 +67,7 @@ class App(ctk.CTk):
         self.add_btn.grid(row=4, column=0, pady=10)
 
         self.show_btn = ctk.CTkButton(
-            master=self, text="Aggiungi cliente", command=self.mostra_clienti
+            master=self, text="Mostra clienti", command=self.mostra_clienti
         )
         self.show_btn.grid(row=4, column=1, pady=10)
 
@@ -156,7 +156,7 @@ class App(ctk.CTk):
     #         status_label.config(text=messaggio, bg=colore, fg=bg_colore)
 
     def mostra_clienti(self):
-        pass
+        ClientiView(self)
 
 
 if __name__ == "__main__":
