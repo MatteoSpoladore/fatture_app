@@ -7,11 +7,14 @@ from components.aggiungi_cliente import aggiungi_cliente as aggiungi_cliente_fin
 import tkinter.messagebox as msg
 
 
-class App(ctk.CTk):
-    def __init__(self):
-        super().__init__()
-        self.title("Registra fatture")
-        self.geometry("900x500")
+class ClientiPage(ctk.CTkFrame):
+    def __init__(self, parent, controller=None):
+        super().__init__(parent)
+        # class App(ctk.CTk):
+        #     def __init__(self):
+        #         super().__init__()
+        #         self.title("Registra Clienti")
+        #         self.geometry("900x500")
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
@@ -60,5 +63,5 @@ class App(ctk.CTk):
 
 
 if __name__ == "__main__":
-    app = App()
+    app = ClientiPage()
     app.mainloop()

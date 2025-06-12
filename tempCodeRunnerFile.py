@@ -1,1 +1,1 @@
-conn.close()
+ self.pages
